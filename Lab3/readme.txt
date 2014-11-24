@@ -33,15 +33,15 @@ amino acid frequency filte
 
 lab3_spinach_mosquito.R
 -----------------------------------------------------------------
-Part III - Q1
+Part III - Example
 
 lab3_spinach_human.R
 -----------------------------------------------------------------
-Part III - Q3
+Part III - Q2
 
 lab3_spinach_monkey.R
 -----------------------------------------------------------------
-PartIII - Q2
+PartIII - Q1
 
 macleay_lab3_pam.txt
 -----------------------------------------------------------------
