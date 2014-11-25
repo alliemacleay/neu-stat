@@ -19,8 +19,11 @@ Seq2 <- 'NGDKASIADLCKVLTTGPLNADTEVVVGCPAPYLTLARSQLPDSVCVAAQNCY'
 AA <- 'ARNDCQEGHILKMFPSTWYV'
 
 # initilize S1 and S2
-S1 <- c()
-S2 <- c()
+S1 <- c() # Made a vector so indexing below is correct. For a matrix, you
+S2 <- c() # always need a comma in the brackets, or you can get unexpected
+          # results.
+          # A matrix index : M[i, ]
+          # A vector index : M[i]
 
 # Translate each sequence into an array of number values
 for(i in 1:nchar(Seq1)) {
@@ -34,11 +37,11 @@ for(i in 1:nchar(Seq2)) {
 }
 
 # initialize ProbSum
-ProbSum <- c()
+ProbSum <- c() # Made a vector
 
 for(k in 1:150) {
   # pam matrix to the power of k
-  pamk <- as.matrix(pam1)%^%k
+  pamk <- as.matrix(pam1) %^% k # Need to do matrix mult here
 
   for(i in 1:20) {
     for(j in 1:20) {
@@ -76,17 +79,13 @@ for(k in 1:150) {
 
 # * find the max likelihood estimation
 MLE.score <- max(ProbSum)
+
 # * find the PAM distance from the max score
 MLE.PAM.distance <- which(ProbSum==MLE.score)
 
 # * set up x and y to graph values
-x <- c()
-y <- x
-
-for(i in 1:10) {
-  x[i] <- i*15
-  y[i] <- ProbSum[i*15]
-}
+x <- 15 * (1:10) # I just vectorized this, more efficient than for-loop
+y <- ProbSum[x]
 
 print("MLE.score and MLE.PAM.distance are populated.  Run plot(x, y).")
 
