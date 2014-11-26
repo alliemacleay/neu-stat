@@ -4,6 +4,7 @@ Files:
 
 Estimating Distances between Sequences by Maximum Likelihood.doc
 R_Estimating Distances between Sequences by Maximum Likelihood.doc
+R_Estimating Distances between Sequences by Maximum Likelihood_solution.doc
 lab3_f.txt
 lab3_spinach_human.R
 lab3_spinach_mosquito.R
@@ -13,6 +14,7 @@ readme.txt
 
 To run analysis for any of the sequences:
 R
+install.packages('RMySQL', repos='http://cran.us.r-project.org') # if not installed
 source("lab3_spinach_mosquito.R")
 MLE.score
 MLE.PAM.distance
